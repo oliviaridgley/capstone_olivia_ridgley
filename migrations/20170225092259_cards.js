@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('cards', table => {
     table.increments();
     table.string("question").notNullable();
-    table.integer("deck_id").unsigned().references('id').inTable('decks');
+    table.integer("deck_id").references('id').inTable('decks');
   });
 };
 

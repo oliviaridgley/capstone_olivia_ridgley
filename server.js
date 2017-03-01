@@ -14,12 +14,12 @@ app.use('/jquery', express.static('node_modules/jquery/dist'));
 app.use('/bootstrap', express.static('node_modules/bootstrap/dist/js'));
 
 // Require all routes
-const decks = require('./routes/decks')
-// const cards = require('./routes/cards')
+const decks = require('./routes/decks');
+const cards = require('./routes/cards');
 
 // Use all routes
 app.use('/decks', decks);
-// app.use('/cards', cards);
+app.use('/cards', cards);
 
 
 // Wildcard Route, Sends the Index.

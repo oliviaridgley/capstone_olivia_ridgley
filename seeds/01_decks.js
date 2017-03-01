@@ -9,17 +9,17 @@ exports.seed = function(knex, Promise) {
         knex('decks').insert({
           id: 1,
           title: 'Questions That Lead to Love',
-          deck_image: '../../public/assets/seed_photos/hand_circle.jpg'
+          deck_image: '../public/assets/seed_photos/hand_circle.jpg'
         }),
         knex('decks').insert({
           id: 2,
           title: 'Sunday Supper',
-          deck_image: '../../public/assets/seed_photos/still_life.jpg'
+          deck_image: '../public/assets/seed_photos/still_life.jpg'
         }),
         knex('decks').insert({
           id: 3,
           title: 'New Year, New You?',
-          deck_image: '../../public/assets/seed_photos/sea_abstract.jpg'
+          deck_image: '../public/assets/seed_photos/sea_abstract.jpg'
         }),
       ]);
     })

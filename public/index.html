@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>FolkWays</title>
-  </head>
-  <body>
 
-  </body>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>FolkWays</title>
+    <!-- Tells Angular where the ui-router should begin -->
+    <base href="/">
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <main class="container">
+    <!-- ui-view -->
+    <ui-view></ui-view>
+  </main>
+    <!-- jquery min -->
+    <script src="/jquery/jquery.min.js"></script>
+    <!-- bootstrap min -->
+    <script src="/bootstrap/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <!-- ui-router : angular -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-beta.3/angular-ui-router.js"></script>
+    <!-- app.module -->
+    <script src="/js/app/app.module.js"></script>
+    <!-- app.config -->
+    <script src="/js/app/app.config.js"></script>
+    <!-- components -->
+    <script src="/js/app/app.component.js"></script>
+    <script src="/js/create-cards/create-cards.component.js"></script>
+    <script src="/js/create-deck/create-deck.component.js"></script>
+    <script src="/js/heart/heart.component.js"></script>
+    <script src="/js/home/home.component.js"></script>
+    <script src="/js/play-deck/play-deck.component.js"></script>
+    <script src="/js/select-deck/select-deck.component.js"></script>
+    <script src="/js/splash/splash-component.js"></script>
+</body>
+
 </html>

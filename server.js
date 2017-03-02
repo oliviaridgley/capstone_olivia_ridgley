@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 
 // Specify node modules, and the public folder.
 app.use(express.static('public'));
-
+app.use(bodyParser.json());
 app.use('/jquery', express.static('node_modules/jquery/dist'));
 app.use('/bootstrap', express.static('node_modules/bootstrap/dist/js'));
 
@@ -43,7 +43,7 @@ app.use((err, _req, res, _next) => {
   res.sendStatus(500);
 });
 
-// App listener, just specifies port and the creation of the listener on that port.
+// App listener, specifies port 8000.
 app.listen(port, () => {
   console.log('Listening on port ' + port);
 });

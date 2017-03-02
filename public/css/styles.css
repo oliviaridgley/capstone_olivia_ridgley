@@ -1,0 +1,52 @@
+/*Body*/
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+}
+
+/*Page Spacing*/
+.content-buffer {
+  padding-bottom: 30px;
+}
+
+.top-margin {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.row-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.center-flex {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.left-flex {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+}
+
+
+
+
+/*Splash Page*/
+
+#splashBackground {
+  width: 100%;
+  height: 100%;
+}
+
+#splashSquare {
+  border: 1px black solid;
+  height: 200px;
+  width: 200px;
+}

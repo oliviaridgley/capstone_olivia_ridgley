@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12 center-block">
+    <h1 class="text-center">Title and logo here</h1>
+  </div>
+</div>
+
+<div class="main">
+  <div class="deckPanel col-md-6 col-sm-12 col-xs-12" ng-repeat="deck in $ctrl.decks">
+    <img class="col-xs-6" src="{{deck.deck_image}}"/>
+    <p>{{deck.title}}</p>
+
+    <div class="btn-group pull-right" role="group" aria-label="...">
+      <button type="button" class="btn btn-default" name="button"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
+      <button ui-sref="playDeck({playId: deck.id})" type="button" class="btn btn-default" name="button">Play</button>
+    </div>
+
+  </div>
+
+</div>

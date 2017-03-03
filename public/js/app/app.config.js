@@ -18,10 +18,10 @@
         component: 'app',
       })
       .state({
-        name: 'splash',
+        name: 'landing',
         parent: 'app',
         url: '/',
-        component: 'splash',
+        component: 'landing',
       })
       .state({
         name: 'home',
@@ -30,10 +30,16 @@
         component: 'home',
       })
       .state({
-        name: 'select-deck',
+        name: 'selectDeck',
         parent: 'app',
         url: '/select-deck',
         component: 'selectDeck',
+      })
+      .state({
+        name: 'playDeck',
+        parent: 'app',
+        url: '/play-deck/:playId',
+        component: 'playDeck',
       })
   }
 }());

@@ -11,7 +11,17 @@
   controller.$inject = ['$http', '$state', '$stateParams']
 
   function controller($http, $state, $stateParams) {
-    const vm = this
+
+    const vm = this;
+    vm.$onInit = onInit;
+    vm.decks = [];
+
+    function onInit() {
+      $http.get('/decks').then(function(response) {
+        // console.log(response.data);
+        vm.decks = response.data;
+      });
+    }
 
 
   }

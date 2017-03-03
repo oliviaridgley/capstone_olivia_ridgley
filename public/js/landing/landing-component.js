@@ -1,10 +1,10 @@
 (function() {
   'use strict';
-  console.log("SPLASH");
+  console.log("LANDING");
 
   angular.module('app')
-    .component('splash', {
-      templateUrl: "/js/splash/splash.template.html",
+    .component('landing', {
+      templateUrl: "/js/landing/landing.template.html",
       controller: controller
     });
 

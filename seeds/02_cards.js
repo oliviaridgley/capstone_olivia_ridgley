@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
         // Inserts seed entries
         knex('cards').insert({
           id: 1,
-          question: ' Given the choice of anyone in the world, whom would you want as a dinner guest?',
+          question: 'Given the choice of anyone in the world, whom would you want as a dinner guest?',
           deck_id: 1
         }),
         knex('cards').insert({

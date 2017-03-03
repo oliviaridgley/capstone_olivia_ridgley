@@ -1,4 +1,8 @@
+/*font-family: 'Cabin', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;*/
+
 /*Body*/
+
 html, body {
   height: 100%;
 }
@@ -9,13 +13,14 @@ body {
 }
 
 /*Page Spacing*/
+
 .content-buffer {
   padding-bottom: 30px;
 }
 
-.top-margin {
-  margin-top: 50px;
-  margin-bottom: 10px;
+.bottom-margin {
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .row-padding {
@@ -35,10 +40,16 @@ body {
   justify-content: flex-start;
 }
 
+.center-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
 
-
-/*Splash Page*/
+/* Splash */
 
 #splashBackground {
   width: 100%;
@@ -49,4 +60,10 @@ body {
   border: 1px black solid;
   height: 200px;
   width: 200px;
+}
+
+/* Select */
+
+.deckPanel {
+  border: 1px solid black;
 }

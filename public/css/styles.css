@@ -9,7 +9,16 @@ html, body {
 
 body {
   position: relative;
-  min-height: 100%;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Cabin', sans-serif;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*Page Spacing*/
@@ -48,6 +57,10 @@ body {
   height: 100vh;
 }
 
+.padding-left {
+  padding-left: 50px;
+}
+
 
 /* Splash */
 
@@ -61,6 +74,32 @@ body {
   height: 200px;
   width: 200px;
 }
+
+/* Home */
+
+#photoBackground {
+  /* Set rules to fill background */
+  /*min-height: 100%;*/
+  /*min-width: 1024px;*/
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  /*height: auto;*/
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  #photoBackground {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
 
 /* Select */
 

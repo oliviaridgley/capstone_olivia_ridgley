@@ -17,9 +17,8 @@
     vm.decks = [];
 
     function onInit() {
-      console.log("onInit");
       $http.get('/decks').then(function(response) {
-        console.log(response.data);
+        // console.log(response.data);
         vm.decks = response.data;
       });
     }

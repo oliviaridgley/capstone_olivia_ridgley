@@ -1,1 +1,27 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12 center-block">
+    <h1 class="text-center">{{$ctrl.deck.title}}</h1>
+  </div>
+</div>
 
+<!-- <div class="main">
+  <div class="col-md-6 col-sm-12 col-xs-12" ng-repeat="card in $ctrl.cards[0]">
+    <img class="col-xs-6" src="{{$ctrl.deck.deck_image}}"/>
+    <p>{{card.question}}</p>
+
+  </div>
+
+</div> -->
+
+<div class="main">
+  <div class="col-md-1 col-sm-1 col-xs-1">
+  <img src="/assets/nav_arrows/left_arrow.svg" alt="">
+  </div>
+  <div class="col-md-10 col-sm-10 col-xs-10">
+   <img class="col-xs-6" src="{{$ctrl.deck.deck_image}}"/>
+   <p>{{$ctrl.cards[0][0].question}}</p>
+  </div>
+  <div class="col-md-1 col-sm-1 col-xs-1">
+  <img src="/assets/nav_arrows/right_arrow.svg" alt="">
+  </div>
+</div>

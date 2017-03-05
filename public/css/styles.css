@@ -1,10 +1,33 @@
 /*font-family: 'Cabin', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;*/
 
+/*
+yellow :
+#F7C74A
+#D5A61C
+#EABA72
+*/
+
+/*
+sage :
+#ACB19A
+#B4B4A1
+#7A8D65
+*/
+
+/*
+darkgreen :
+#536442
+#4D5F4E
+*/
+
+
+
 /*Body*/
 
 html, body {
   height: 100%;
+  background-color: #E8E4DB;
 }
 
 body {
@@ -19,6 +42,25 @@ h1,h2,h3,h4,h5 {
 
 p {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+button {
+  background-color: rgba(213, 166, 28, 1);
+  padding: 9px 16px;
+  border-radius: 2px;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+   margin: 10px;
+}
+
+.button:hover {
+    background-color: rgba(213, 166, 28, 0.2);
+}
+
+.button:active {
+  background-color: rgba(188, 141, 3, 1);
 }
 
 /*Page Spacing*/
@@ -61,6 +103,19 @@ p {
   padding-left: 50px;
 }
 
+.flex-center {
+  align-self: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*rgba(0, 0, 0, 0.3)*/
+.text-overlay-bg {
+  background: rgba(213, 166, 28, .7);
+  padding: 7px;
+  color: white;
+  border-radius: 2px;
+}
 
 /* Splash */
 
@@ -70,9 +125,14 @@ p {
 }
 
 #splashSquare {
-  border: 1px black solid;
-  height: 200px;
-  width: 200px;
+  background-image: url('../assets/background_photos/touching_hands.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+  display: flex;
+  height: 480px;
+  width: 500px;
 }
 
 /* Home */
@@ -98,8 +158,6 @@ p {
     margin-left: -512px;   /* 50% */
   }
 }
-
-
 
 /* Select */
 

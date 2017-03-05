@@ -13,7 +13,7 @@
   function controller($http, $state, $stateParams) {
     const vm = this
     vm.$onInit = onInit;
-    vm.cards = [];
+    vm.cards = []
 
     function onInit() {
       $http.get(`/decks/${$stateParams.playId}`)
@@ -25,17 +25,16 @@
       $http.get('/cards')
         .then(function(response) {
           const routeCard = response.data.filter((deck) => {
-            if (deck.deck_id === parseInt($stateParams.playId)) return true;
+            if (deck.deck_id === parseInt($stateParams.playId)) {
+              return true;
+            }
           });
-
           vm.cards.push(routeCard);
+          return vm.cards
         });
     }
     console.log(vm.cards)
   }
-
-
-
 
 
 

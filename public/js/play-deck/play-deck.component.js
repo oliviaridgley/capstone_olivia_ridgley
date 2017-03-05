@@ -14,6 +14,8 @@
     const vm = this
     vm.$onInit = onInit;
     vm.cards = []
+    vm.nextCard = nextCard;
+    vm.backCard = backCard;
 
     function onInit() {
       $http.get(`/decks/${$stateParams.playId}`)
@@ -34,6 +36,15 @@
         });
     }
     console.log(vm.cards)
+  }
+
+  function nextCard() {
+
+
+  }
+
+  function backCard() {
+
   }
 
 

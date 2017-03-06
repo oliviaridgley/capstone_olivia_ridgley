@@ -1,0 +1,35 @@
+
+
+    <form name="form" novalidate ng-submit="$ctrl.newDeck()">
+
+        <div ng-class="{'form-group': true, 'has-error': form.title.$invalid && form.title.$touched }">
+            <label for="title">Title</label>
+            <input class="form-control" name="title" required ng-model="$ctrl.deck.title" placeholder="Name your question deck">
+        </div>
+
+
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="$ctrl.getQueryName($ctrl.userQuery)" type="button">Search</button>
+              </span>
+                    <input ng-model="$ctrl.userQuery" type="text" class="form-control" placeholder="Enter an artists name here...">
+                    <div class="row">
+                    <div ng-click="$ctrl.testFunction($event)" ng-repeat="option in $ctrl.results.artObjects">
+                        <!-- <p>{{option.webImage.url}}</p> -->
+                            <div class="col-xs-6 col-md-3">
+                                <a class="thumbnail">
+                                    <img src="{{option.webImage.url}}">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Start Creating Questions</button>
+              </div>  
+            </div>
+    </form>

@@ -103,6 +103,11 @@ button {
   padding-left: 50px;
 }
 
+.padding-left-right {
+  padding-left: 30px;
+  padding-right: 25px;
+}
+
 .flex-center {
   align-self: center;
   justify-content: center;

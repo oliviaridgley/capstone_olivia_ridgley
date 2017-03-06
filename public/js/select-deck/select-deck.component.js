@@ -15,12 +15,17 @@
     const vm = this;
     vm.$onInit = onInit;
     vm.decks = [];
+    vm.heartDeck = heartDeck;
 
     function onInit() {
       $http.get('/decks').then(function(response) {
         // console.log(response.data);
         vm.decks = response.data;
       });
+    }
+
+    function heartDeck(deck) {
+      sessionStorage.setItem('hearted', deck.id);
     }
 
 

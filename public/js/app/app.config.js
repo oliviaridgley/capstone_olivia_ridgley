@@ -50,7 +50,7 @@
       .state({
         name: 'createCards',
         parent: 'app',
-        url: '/create-cards',
+        url: '/create-cards/:createId',
         component: 'createCards',
       })
   }

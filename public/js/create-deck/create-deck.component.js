@@ -19,6 +19,7 @@
 
     function testFunction(event) {
       vm.selectedImg = event.target.src;
+      console.log(vm.selectedImg);
     }
 
     function getQueryName(artist) {
@@ -34,6 +35,14 @@
 
     function newDeck() {
 
+      vm.deck.deck_image = vm.selectedImg;
+      console.log(vm.deck);
+      $http.post('/decks', vm.deck)
+        .then(function(response) {
+          delete vm.deck;
+          console.log(response);
+          $state.go('createCards', { createId: response.data.id })
+        })
     }
 
 

@@ -25,7 +25,14 @@
     }
 
     function heartDeck(deck) {
-      sessionStorage.setItem('hearted', deck.id);
+      if (!sessionStorage.hearted) {
+        sessionStorage.hearted = JSON.stringify({ "data": [] });
+      }
+
+
+      var hearted = JSON.parse(sessionStorage.hearted);
+      hearted.data.push(deck.id);
+      sessionStorage.hearted = JSON.stringify({ "data": hearted.data });
     }
 
 

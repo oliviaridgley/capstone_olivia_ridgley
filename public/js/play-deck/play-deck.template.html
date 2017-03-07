@@ -15,13 +15,13 @@
 
 <div class="main">
   <div class="col-md-1 col-sm-1 col-xs-1">
-  <img ng-click="nextCard" id="play-nav-left" src="/assets/nav_arrows/left.svg" alt="">
+  <img ng-if="$ctrl.currentIndex > 0" ng-click="$ctrl.backCard()" id="play-nav-left" src="/assets/nav_arrows/left.svg" alt="">
   </div>
   <div class="col-md-10 col-sm-10 col-xs-10 cardPanel">
    <img class="col-md-10 col-sm-10 col-xs-10" src="{{$ctrl.deck.deck_image}}"/>
-   <p class="cardPanelText text-center">{{$ctrl.cards[0][0].question}}</p>
+   <p class="cardPanelText text-center">{{$ctrl.currentCard}}</p>
   </div>
   <div class="col-md-1 col-sm-1 col-xs-1">
-  <img ng-click="backCard" id="play-nav-right" src="/assets/nav_arrows/right.svg" alt="">
+  <img ng-if="$ctrl.currentIndex < 36" ng-click="$ctrl.nextCard()" id="play-nav-right" src="/assets/nav_arrows/right.svg" alt="">
   </div>
 </div>

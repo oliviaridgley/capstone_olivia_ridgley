@@ -79,6 +79,14 @@ button {
   padding-bottom: 10px;
 }
 
+.top-spacer {
+  margin-top: 35px;
+}
+
+.top-spacer-more {
+  margin-top: 60px;
+}
+
 .center-flex {
   display: flex;
   flex-flow: row;

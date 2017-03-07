@@ -34,7 +34,6 @@
     }
 
     function newDeck() {
-
       vm.deck.deck_image = vm.selectedImg;
       console.log(vm.deck);
       $http.post('/decks', vm.deck)

@@ -41,5 +41,23 @@
         url: '/play-deck/:playId',
         component: 'playDeck',
       })
+      .state({
+        name: 'createDeck',
+        parent: 'app',
+        url: '/create-deck',
+        component: 'createDeck',
+      })
+      .state({
+        name: 'createCards',
+        parent: 'app',
+        url: '/create-cards/:createId',
+        component: 'createCards',
+      })
+      .state({
+        name: 'heart',
+        parent: 'app',
+        url: '/heart',
+        component: 'heart',
+      })
   }
 }());

@@ -1,1 +1,27 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12 center-block">
+    <h1 class="text-center">{{$ctrl.deck.title}}</h1>
+  </div>
+</div>
 
+<!-- <div class="main">
+  <div class="col-md-6 col-sm-12 col-xs-12" ng-repeat="card in $ctrl.cards[0]">
+    <img class="col-xs-6" src="{{$ctrl.deck.deck_image}}"/>
+    <p>{{card.question}}</p>
+
+  </div>
+
+</div> -->
+
+<div class="main">
+  <div class="col-md-1 col-sm-1 col-xs-1">
+  <img ng-if="$ctrl.currentIndex > 0" ng-click="$ctrl.backCard()" id="play-nav-left" src="/assets/nav_arrows/left.svg" alt="">
+  </div>
+  <div class="col-md-10 col-sm-10 col-xs-10 cardPanel">
+   <img class="col-md-10 col-sm-10 col-xs-10" src="{{$ctrl.deck.deck_image}}"/>
+   <p class="cardPanelText text-center">{{$ctrl.currentCard}}</p>
+  </div>
+  <div class="col-md-1 col-sm-1 col-xs-1">
+  <img ng-if="$ctrl.currentIndex < 36" ng-click="$ctrl.nextCard()" id="play-nav-right" src="/assets/nav_arrows/right.svg" alt="">
+  </div>
+</div>

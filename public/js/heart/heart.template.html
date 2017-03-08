@@ -5,10 +5,10 @@
 </div>
 <div class="padding-left-right nav ">
     <div class="pull-right">
-        <button ui-sref="createDeck" type="button" name="button">Create Your Own Deck</button>
+        <button ui-sref="createDeck" type="button" name="button">Create Your Own</button>
         <button ui-sref="home" type="button" name="button">Home</button>
-        <button ui-sref="selectDeck" type="button" name="button">Back to All Deck</button>
-        <button ng-click="$ctrl.clearHearted()" type="button" name="button"><span class="glyphicon glyphicon-trash"><p>Clear Hearted</p></span></button>
+        <button ui-sref="selectDeck" type="button" name="button">Back to All Decks</button>
+        <button ng-click="$ctrl.clearHearted()" type="button" name="button" data-toggle="tooltip" data-placement="bottom" title="Clear Hearted"><span class="glyphicon glyphicon-trash"></span></button>
     </div>
     <ul class="nav nav-pills pull-left">
         <li role="presentation" class="active">

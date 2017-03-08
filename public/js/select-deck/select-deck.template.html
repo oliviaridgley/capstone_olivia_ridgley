@@ -5,7 +5,8 @@
 </div>
 <div class="padding-left-right nav">
     <div class="pull-right">
-        <button ui-sref="createDeck" type="button" name="button">Create Your Own Deck</button>
+        <button ui-sref="home" type="button" name="button">Home</button>
+        <button ui-sref="createDeck" type="button" name="button">Create Your Own</button>
         <button ui-sref="heart" type="button" name="button"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
     </div>
     <ul class="nav nav-pills">
@@ -30,7 +31,7 @@
             <div class="container">
                 <p>{{deck.title}}</p>
                 <div class="btn-group btn-group-sm" role="group" aria-label="...">
-                    <button ng-click="$ctrl.heartDeck(deck)" type="button" class=" btn-default" name="button" style="background:rgb(197,160,147); border:none;"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
+                    <button ng-click="$ctrl.heartDeck(deck); selected = true" type="button" class=" btn-default" name="button" style="background:rgb(197,160,147); border:none;" ng-class="{imgOpacity: selected}"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
 
                     <button ui-sref="playDeck({playId: deck.id})" type="button" class=" btn-default" name="button" style="background:rgb(197,160,147); border:none;">Play</button>
                 </div>

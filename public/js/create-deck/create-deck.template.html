@@ -4,9 +4,9 @@
     </div>
 </div>
 
-<div class="col-med-8 col-sm-8 flex">
+<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
 
-    <form name="form" class="flex-center"  style="width:100%;" novalidate ng-submit="$ctrl.newDeck()">
+    <form name="form" novalidate ng-submit="$ctrl.newDeck()">
 
         <div class="text-center" ng-class="{'form-group': true, 'has-error': form.title.$invalid && form.title.$touched }">
             <label for="title"><h5>Title</h5></label>
@@ -14,28 +14,25 @@
         </div>
 
         <div class="col-lg-6">
-          <div class="row text-center">
-            <h5>Find a Background Image</h5>
+            <div class="row text-center">
+                <h5>Find a Background Image</h5>
 
-          <input ng-model="$ctrl.userQuery" type="text" class="form-control" placeholder="Enter an artists name here...">
-          <button ng-click="$ctrl.getQueryName($ctrl.userQuery)" type="button">Search</button>
-
+                <input ng-model="$ctrl.userQuery" type="text" class="form-control" placeholder="Enter an artists name here...    ex. 'Vermeer', 'Rembrandt', 'Van Gogh'.">
+                <button ng-click="$ctrl.getQueryName($ctrl.userQuery)" type="button">Search</button>
                 <div class="row">
-                    <div ng-click="$ctrl.testFunction($event)" ng-repeat="option in $ctrl.results.artObjects">
-                        <!-- <p>{{option.webImage.url}}</p> -->
-                        <div class="col-xs-6 col-md-3">
-                            <a class="thumbnail">
-                                <img src="{{option.webImage.url}}">
-                            </a>
-                        </div>
-
+                    <div class="form-group text-center">
+                        <button type="submit" ng-disabled="form.$invalid">Start Creating Questions</button>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group text-center">
-                <button type="submit" ng-disabled="form.$invalid">Start Creating Questions</button>
+                <div class="row">
+                    <div ng-click="$ctrl.testFunction($event); selected = true" ng-repeat="option in $ctrl.results.artObjects">
+                        <div class="col-xs-6 col-md-3">
+                            <a class="thumbnail">
+                                <img src="{{option.webImage.url}}" ng-class="{imgOpacity: selected}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

@@ -157,7 +157,7 @@ button {
 }
 
 #splashSquare {
-  background-image: url('../assets/background_photos/hands.gif');
+  background-image: url('../assets/background_photos/slowed.gif');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -218,9 +218,8 @@ button {
   height: auto;
   display: inline-block;
   vertical-align: middle;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
   margin-bottom: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 }
 
@@ -249,4 +248,9 @@ button {
     width:40px;
     height:40px;
   }
+}
+
+
+.imgOpacity {
+  opacity: 0.2;
 }

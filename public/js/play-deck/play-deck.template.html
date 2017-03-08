@@ -7,7 +7,7 @@
     <ul class="dropdown-menu">
       <li><a ui-sref="home">Home</a></li>
 
-      <li><a ui-sref="selectDeck">Browse Decks</a></li>
+      <li><a ui-sref="selectDeck">Browse All Decks</a></li>
 
       <li><a ui-sref="createDeck">Create Your Own</a></li>
 
@@ -24,13 +24,16 @@
 <div class="main">
   <!-- PAGE NUMS -->
   <div class="row text-center">
-    <p text-center>{{$ctrl.currentIndex + 1}}  / {{$ctrl.cards[0].length}}</p>
+    <p text-center>{{$ctrl.currentIndex}}  / {{$ctrl.cards[0].length}}</p>
   </div>
 
   <!-- ARRROWS -->
   <div class="row flex-center">
-    <img ng-if="$ctrl.currentIndex > 0" ng-click="$ctrl.backCard()" class="play-nav" src="/assets/nav_arrows/left.svg" alt="">
-    <img ng-if="$ctrl.currentIndex < $ctrl.cards[0].length" ng-click="$ctrl.nextCard()" class="play-nav" src="/assets/nav_arrows/right.svg" alt="" style="">
+
+    <img ng-if="$ctrl.currentIndex > 0" ng-click="$ctrl.backCard()" class="play-nav" src="/assets/nav_arrows/left.svg" alt="" data-toggle="tooltip" data-placement="right" title="Last Question">
+
+    <img ng-if="$ctrl.currentIndex < $ctrl.cards[0].length" ng-click="$ctrl.nextCard()" class="play-nav" src="/assets/nav_arrows/right.svg" alt="" data-toggle="tooltip" data-placement="right" title="Next Question">
+
   </div>
 
   <!-- SLIDES -->

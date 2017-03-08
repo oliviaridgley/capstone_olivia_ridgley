@@ -53,5 +53,11 @@
         url: '/create-cards/:createId',
         component: 'createCards',
       })
+      .state({
+        name: 'heart',
+        parent: 'app',
+        url: '/heart',
+        component: 'heart',
+      })
   }
 }());

@@ -1,21 +1,44 @@
-<div class="row center-modal">
-
-  <div class="row">
-    <h5 class="text-center">36.</h5>
+<div class="row">
+  <div class="col-sm-12 col-md-12 center-block">
+    <h1 class="text-center">Hearted Decks</h1>
   </div>
-
-  <div class="row center-flex">
-    <div class=".col-md-12 col-xs-12" id="splashSquare">
-      <p class="text-center">4. What would constitute a “perfect” day for you?</p>
-      <p class="text-center">17. What is your most treasured memory?</p>
-    </div>
+</div>
+<div class="padding-left-right nav ">
+  <div class="pull-right">
+    <button ui-sref="createDeck" type="button" name="button">Create Your Own Deck</button>
+    <button ui-sref="home" type="button" name="button">Home</button>
+    <button ui-sref="selectDeck" type="button" name="button">Back to All Deck</button>
+    <button ng-click="$ctrl.clearHearted()" type="button" name="button"><span class="glyphicon glyphicon-trash"><p>Clear Hearted</p></span></button>
   </div>
+  <ul class="nav nav-pills pull-left">
+    <li role="presentation" class="active">
+      <input type="search" class="form-control input-sm search-form" placeholder="Filter" ng-model="search">
+    </li>
+    <li class="dropdown" ng-init="sort='-created_at'; sortName='Date'">
+      <a href="#"
+      class="dropdown-toggle"
+      data-toggle="dropdown"
+      role="button"
+      aria-haspopup="true"
+      aria-expanded="false">Sort By {{ $ctrl.sortName }}<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a ng-click="sort='-created_at'; sortName='Date';">Date</a></li>
+        <li><a ng-click="sort='title'; sortName='Title'">Title</a></li>
+      </ul>
+    </li>
 
-  <div class="row">
-    <div class=".col-md-12 col-xs-12 center-flex">
-      <button class="bottom-margin" type="button" name="button">Play Original Deck</button>
-      <button class="bottom-margin" type="button" name="button">Find New Decks</button>
+  </ul>
+
+<div class="main">
+  <div class="deckPanel col-md-6 col-sm-12 col-xs-12" ng-repeat="deck in $ctrl.decks | filter:search | orderBy:sort">
+    <img class="col-xs-6" src="{{deck.deck_image}}"/>
+    <p>{{deck.title}}</p>
+
+    <div class="btn-group pull-right" role="group" aria-label="...">
+      <!-- <button ng-click="$ctrl.heartDeck(deck)" type="button" class="btn btn-default" name="button"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button> -->
+      <button ui-sref="playDeck({playId: deck.id})" type="button" class="btn btn-default" name="button">Play</button>
     </div>
+
   </div>
 
 </div>

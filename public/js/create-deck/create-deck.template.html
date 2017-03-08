@@ -1,35 +1,43 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12 center-block">
+        <h1 class="text-center">Create Your Deck</h1>
+    </div>
+</div>
 
+<div class="col-med-8 col-sm-8 flex">
 
-    <form name="form" novalidate ng-submit="$ctrl.newDeck()">
+    <form name="form" class="flex-center"  style="width:100%;" novalidate ng-submit="$ctrl.newDeck()">
 
-        <div ng-class="{'form-group': true, 'has-error': form.title.$invalid && form.title.$touched }">
-            <label for="title">Title</label>
-            <input class="form-control" name="title" required ng-model="$ctrl.deck.title" placeholder="Name your question deck">
+        <div class="text-center" ng-class="{'form-group': true, 'has-error': form.title.$invalid && form.title.$touched }">
+            <label for="title"><h5>Title</h5></label>
+            <input class="form-control" name="title" required ng-model="$ctrl.deck.title" placeholder="Give your deck a name...">
         </div>
 
+        <div class="col-lg-6">
+          <div class="row text-center">
+            <h5>Find a Background Image</h5>
 
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                <button class="btn btn-default" ng-click="$ctrl.getQueryName($ctrl.userQuery)" type="button">Search</button>
-              </span>
-                    <input ng-model="$ctrl.userQuery" type="text" class="form-control" placeholder="Enter an artists name here...">
-                    <div class="row">
+          <input ng-model="$ctrl.userQuery" type="text" class="form-control" placeholder="Enter an artists name here...">
+          <button ng-click="$ctrl.getQueryName($ctrl.userQuery)" type="button">Search</button>
+
+                <div class="row">
                     <div ng-click="$ctrl.testFunction($event)" ng-repeat="option in $ctrl.results.artObjects">
                         <!-- <p>{{option.webImage.url}}</p> -->
-                            <div class="col-xs-6 col-md-3">
-                                <a class="thumbnail">
-                                    <img src="{{option.webImage.url}}">
-                                </a>
-                            </div>
-
+                        <div class="col-xs-6 col-md-3">
+                            <a class="thumbnail">
+                                <img src="{{option.webImage.url}}">
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
-            <div class="row">
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Start Creating Questions</button>
-              </div>
+        </div>
+        <div class="row">
+            <div class="form-group text-center">
+                <button type="submit" ng-disabled="form.$invalid">Start Creating Questions</button>
             </div>
+        </div>
     </form>
+
+</div>

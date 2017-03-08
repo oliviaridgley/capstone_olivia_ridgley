@@ -1,41 +1,42 @@
 <div class="row">
-  <div class="col-sm-12 col-md-12 center-block">
-    <h1 class="text-center">Choose your deck</h1>
-  </div>
+    <div class="col-sm-12 col-md-12 center-block">
+        <h1 class="text-center">Choose your deck</h1>
+    </div>
 </div>
-<div class="padding-left-right nav ">
-  <div class="pull-right">
-    <button ui-sref="createDeck" type="button" name="button">Create Your Own Deck</button>
-    <button ui-sref="heart" type="button" name="button"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
-  </div>
-  <ul class="nav nav-pills">
-    <li role="presentation" class="active">
-      <input type="search" class="form-control input-sm search-form" placeholder="Filter" ng-model="search">
-    </li>
-    <li class="dropdown" ng-init="sort='-created_at'; sortName='Date'">
-      <a href="#"
-      class="dropdown-toggle"
-      data-toggle="dropdown"
-      role="button"
-      aria-haspopup="true"
-      aria-expanded="false">Sort By {{ $ctrl.sortName }}<span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a ng-click="sort='-created_at'; sortName='Date';">Date</a></li>
-        <li><a ng-click="sort='title'; sortName='Title'">Title</a></li>
-      </ul>
-    </li>
-  </ul>
+<div class="padding-left-right nav">
+    <div class="pull-right">
+        <button ui-sref="createDeck" type="button" name="button">Create Your Own Deck</button>
+        <button ui-sref="heart" type="button" name="button"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
+    </div>
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active">
+            <input type="search" class="form-control input-sm search-form" placeholder="Filter" ng-model="search">
+        </li>
+        <li class="dropdown" ng-init="sort='-created_at'; sortName='Date'">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort By {{ $ctrl.sortName }}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a ng-click="sort='-created_at'; sortName='Date';">Date</a></li>
+                <li><a ng-click="sort='title'; sortName='Title'">Title</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
 <div class="main">
-  <div class="deckPanel col-md-6 col-sm-12 col-xs-12" ng-repeat="deck in $ctrl.decks | filter:search | orderBy:sort">
-    <img class="col-xs-6" src="{{deck.deck_image}}"/>
-    <p>{{deck.title}}</p>
+    <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="deck in $ctrl.decks | filter:search | orderBy:sort">
 
-    <div class="btn-group pull-right" role="group" aria-label="...">
-      <button ng-click="$ctrl.heartDeck(deck)" type="button" class="btn btn-default" name="button"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
-      <button ui-sref="playDeck({playId: deck.id})" type="button" class="btn btn-default" name="button">Play</button>
+        <div class="card">
+            <img class="col-xs-6" src="{{deck.deck_image}}" />
+            <div class="container">
+                <p>{{deck.title}}</p>
+                <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                    <button ng-click="$ctrl.heartDeck(deck)" type="button" class=" btn-default" name="button" style="background:rgb(197,160,147); border:none;"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></button>
+
+                    <button ui-sref="playDeck({playId: deck.id})" type="button" class=" btn-default" name="button" style="background:rgb(197,160,147); border:none;">Play</button>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-  </div>
 
 </div>

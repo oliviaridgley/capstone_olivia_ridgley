@@ -1,3 +1,9 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12 center-block">
+        <h1 class="text-center">Create Your Questions</h1>
+        <p class="text-center">Fill your deck with questions (Max 36), then press 'submit all questions' to see the final product.</p>
+    </div>
+</div>
 <div class="col-med-8 col-sm-12 col-xs-12">
 
   <form name="form" novalidate ng-submit="$ctrl.newCard()">
@@ -5,8 +11,8 @@
     <textarea id="cardTextArea" class="form-control" rows="2" maxlength="255" name="question" required ng-model="$ctrl.card.question" placeholder="ex.'What was your favorite childhood book?'"></textarea>
     <div class="row">
 
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary pull-right" ng-disabled="form.$invalid">Add Question</button>
+      <div class="form-group text-center">
+        <button type="submit" ng-disabled="form.$invalid">Add Question</button>
       </div>
 
     </div>
@@ -16,15 +22,19 @@
     <p>Reached max number of questions, please click 'submit all' to see your new deck!</p>
   </div>
 
-  <div class="row">
-    <button ng-click ="$ctrl.submitAll()" type="button" class="pull-right" name="button">Submit All Questions</button>
+  <div class="row text-center">
+    <button ng-click ="$ctrl.submitAll()" type="button"  name="button">Submit All Questions</button>
   </div>
 
   <div class="row">
-    <div ng-repeat='card in $ctrl.cards' class="col-med-6">
-      <ol>
-      <li>{{card.question}}</li>
-    </ol>
+    <div class="col-med-12 flex">
+      <div class="center-flex">
+        <ol reversed>
+  
+          <li ng-repeat="card in $ctrl.cards"><p>{{card.question}}</p></li>
+
+        </ol>
+      </div>
     </div>
 
   </div>

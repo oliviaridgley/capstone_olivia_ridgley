@@ -1,27 +1,46 @@
-<div class="row">
-  <div class="col-sm-12 col-md-12 center-block">
-    <h1 class="text-center">{{$ctrl.deck.title}}</h1>
+<div class="col-med-12 col-sm-12 col-xs-12">
+
+  <div class="btn-group">
+    <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a ui-sref="home">Home</a></li>
+
+      <li><a ui-sref="selectDeck">Browse Decks</a></li>
+
+      <li><a ui-sref="createDeck">Create Your Own</a></li>
+
+      <li><a href="#">Help</a></li>
+    </ul>
   </div>
-</div>
 
-<!-- <div class="main">
-  <div class="col-md-6 col-sm-12 col-xs-12" ng-repeat="card in $ctrl.cards[0]">
-    <img class="col-xs-6" src="{{$ctrl.deck.deck_image}}"/>
-    <p>{{card.question}}</p>
-
+  <div class="row">
+    <div class="col-sm-12 col-md-12 center-block">
+      <h1 class="text-center">{{$ctrl.deck.title}}</h1>
+    </div>
   </div>
-
-</div> -->
 
 <div class="main">
-  <div class="col-md-1 col-sm-1 col-xs-1">
-  <img ng-if="$ctrl.currentIndex > 0" ng-click="$ctrl.backCard()" id="play-nav-left" src="/assets/nav_arrows/left.svg" alt="">
+  <!-- PAGE NUMS -->
+  <div class="row text-center">
+    <p text-center>{{$ctrl.currentIndex + 1}}  / {{$ctrl.cards[0].length}}</p>
   </div>
-  <div class="col-md-10 col-sm-10 col-xs-10 cardPanel">
-   <img class="col-md-10 col-sm-10 col-xs-10" src="{{$ctrl.deck.deck_image}}"/>
-   <p class="cardPanelText text-center">{{$ctrl.currentCard}}</p>
+
+  <!-- ARRROWS -->
+  <div class="row flex-center">
+    <img ng-if="$ctrl.currentIndex > 0" ng-click="$ctrl.backCard()" class="play-nav" src="/assets/nav_arrows/left.svg" alt="">
+    <img ng-if="$ctrl.currentIndex < $ctrl.cards[0].length" ng-click="$ctrl.nextCard()" class="play-nav" src="/assets/nav_arrows/right.svg" alt="" style="">
   </div>
-  <div class="col-md-1 col-sm-1 col-xs-1">
-  <img ng-if="$ctrl.currentIndex < 36" ng-click="$ctrl.nextCard()" id="play-nav-right" src="/assets/nav_arrows/right.svg" alt="">
+
+  <!-- SLIDES -->
+  <div class="row flex-center">
+    <div class="col-md-4 col-sm-8 col-xs-10">
+      <img class="cardPanel" src="{{$ctrl.deck.deck_image}}"/>
+      <p class="cardPanelText text-center">{{$ctrl.currentCard}}</p>
+    </div>
   </div>
+
+</div>
+
 </div>

@@ -21,6 +21,21 @@ exports.seed = function(knex, Promise) {
           title: 'New Year, New You?',
           deck_image: 'assets/seed_photos/sea_abstract.jpg'
         }),
+        knex('decks').insert({
+          id: 4,
+          title: 'You had me at "Hello World."',
+          deck_image: 'assets/seed_photos/lady.jpg'
+        }),
+        knex('decks').insert({
+          id: 5,
+          title: 'Brevity, simplicity, and humanity.',
+          deck_image: 'assets/seed_photos/hand_study.jpg'
+        }),
+        knex('decks').insert({
+          id: 6,
+          title: 'This or That?',
+          deck_image: 'assets/seed_photos/birds.jpg'
+        })
       ]);
     })
     .then(() => {

@@ -377,7 +377,141 @@ exports.seed = function(knex, Promise) {
           id: 74,
           question: 'Talk about the most difficult transition you’ve experienced in your lifetime.',
           deck_id: 3
+        }),
+        // Deck Four : 'you had me at "hello world"'
+        knex('cards').insert({
+          id: 75,
+          question: 'Is your name Google? Because you have everything Ive been searching for.',
+          deck_id: 4
+        }),
+        knex('cards').insert({
+          id: 76,
+          question: 'If Internet Explorer is brave enough to ask you to be your default browser, I’m brave enough to ask you out!',
+          deck_id: 4
+        }),
+        knex('cards').insert({
+          id: 77,
+          question: 'You auto-complete me.',
+          deck_id: 4
+        }),
+        knex('cards').insert({
+          id: 78,
+          question: 'I think you could be an integral part of my project life cycle.',
+          deck_id: 4
+        }),
+        knex('cards').insert({
+          id: 79,
+          question: 'I must be using Apple maps, because I keep getting lost in your eyes. ',
+          deck_id: 4
+        }),
+        knex('cards').insert({
+          id: 80,
+          question: 'My love for you is a constant variable: unupdatable and unchangeable',
+          deck_id: 4
+        }),
+        knex('cards').insert({
+          id: 81,
+          question: 'You are my semicolon; always present in everything I do.',
+          deck_id: 4
+        }),
+        knex('cards').insert({
+          id: 82,
+          question: 'You still use Internet Explorer? You must like it nice and slow.',
+          deck_id: 4
+        }),
+        // Deck Five : Clarity,..
+        knex('cards').insert({
+          id: 83,
+          question: 'What do you do to get rid of stress?',
+          deck_id: 5
+        }),
+        knex('cards').insert({
+          id: 84,
+          question: 'What is something that is popular now that annoys you?',
+          deck_id: 5
+        }),
+        knex('cards').insert({
+          id: 85,
+          question: 'Who is your favorite entertainer (comedian, musician, actor, etc.)?',
+          deck_id: 5
+        }),
+        knex('cards').insert({
+          id: 86,
+          question: 'What was the last time you worked incredibly hard?',
+          deck_id: 5
+        }),
+        knex('cards').insert({
+          id: 87,
+          question: 'Who is your oldest friend? Where did you meet them?',
+          deck_id: 5
+        }),
+        knex('cards').insert({
+          id: 88,
+          question: 'What do you think of tattoos? Do you have any?',
+          deck_id: 5
+        }),
+        knex('cards').insert({
+          id: 89,
+          question: 'What’s your favorite number? Why?',
+          deck_id: 5
+        }),
+        knex('cards').insert({
+          id: 90,
+          question: 'What is the strangest dream you have ever had?',
+          deck_id: 5
+        }),
+        knex('cards').insert({
+          id: 91,
+          question: 'Who in your life brings you the most joy?',
+          deck_id: 5
+        }),
+        // Deck Six : This or That
+        knex('cards').insert({
+          id: 92,
+          question: 'Toast or Eggs?',
+          deck_id: 6
+        }),
+        knex('cards').insert({
+          id: 93,
+          question: 'Cardio or Weights?',
+          deck_id: 6
+        }),
+        knex('cards').insert({
+          id: 94,
+          question: 'Ice Cream or Snow Cone?',
+          deck_id: 6
+        }),
+        knex('cards').insert({
+          id: 95,
+          question: 'Cake or Pie?',
+          deck_id: 6
+        }),
+        knex('cards').insert({
+          id: 96,
+          question: 'Swimming or Sunbathing?',
+          deck_id: 6
+        }),
+        knex('cards').insert({
+          id: 97,
+          question: 'Laundry or Dishes?',
+          deck_id: 6
+        }),
+        knex('cards').insert({
+          id: 98,
+          question: 'Jogging or Hiking?',
+          deck_id: 6
+        }),
+        knex('cards').insert({
+          id: 99,
+          question: 'Hamburger or Taco?',
+          deck_id: 6
+        }),
+        knex('cards').insert({
+          id: 100,
+          question: 'Pen or Pencil?',
+          deck_id: 6
         })
+
       ]);
     })
     .then(() => {

@@ -59,5 +59,11 @@
         url: '/heart',
         component: 'heart',
       })
+      .state({
+        name: 'help',
+        parent: 'app',
+        url: '/help',
+        component: 'help',
+      });
   }
 }());

@@ -12,6 +12,7 @@ router.use(bodyParser.json());
 router.get('/', (req, res, next) => {
   knex('decks')
     .select("id", "title", "deck_image")
+    // .orderBy("id")
     .then(results => {
       if (results.length === 0) {
         return res.send(404);

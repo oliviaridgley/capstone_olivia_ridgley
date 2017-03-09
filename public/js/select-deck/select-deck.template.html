@@ -14,7 +14,7 @@
         <li role="presentation" class="active">
             <input type="search" class="form-control input-sm search-form" placeholder="Filter" ng-model="search">
         </li>
-        <li class="dropdown" ng-init="sort='-created_at'; sortName='Date'">
+        <li class="dropdown" ng-init="sort='title'; sortName='Title'">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort By {{ $ctrl.sortName }}<span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a ng-click="sort='-created_at'; sortName='Date';">Date</a></li>
